@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 ReikoYuzuka
+
 // rp-hub-compat 插件入口
 //
 // 契约（SillyTavern 1.18.0 plugin-loader.js）：

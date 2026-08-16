@@ -1,5 +1,6 @@
 {
   "name": "rp-hub-compat",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "license": "AGPL-3.0-or-later"
 }
