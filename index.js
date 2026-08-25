@@ -12,7 +12,7 @@
 
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import fs from 'node:fs';
+import fsPromises from 'node:fs/promises';
 import { registerRoutes } from './lib/router.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -25,7 +25,7 @@ export const info = {
 
 export async function init(router) {
     const dataDir = path.join(__dirname, 'data');
-    fs.mkdirSync(dataDir, { recursive: true });
+    await fsPromises.mkdir(dataDir, { recursive: true });
     globalThis.__rphubStartedAt = Date.now();
     registerRoutes(router, { dataDir });
 }
